@@ -1,112 +1,30 @@
-# DSA-JAVA
+# DSA-JAVA 🚀
 
-A Java-based Data Structures and Algorithms practice repository focused on improving problem-solving, strengthening core DSA concepts, and preparing for coding interviews.
+[![LeetCode](https://img.shields.io/badge/LeetCode-200%2B%20Solved-orange?style=flat&logo=leetcode)](https://leetcode.com/u/Arun-G)
+[![Language](https://img.shields.io/badge/Language-Java-blue?style=flat&logo=java)](https://www.java.com)
+[![GitHub](https://img.shields.io/badge/GitHub-ArunDev--07-black?style=flat&logo=github)](https://github.com/ArunDev-07)
+[![Status](https://img.shields.io/badge/Status-Active-brightgreen?style=flat)]()
 
-## About
+> A structured Java repository for DSA problem-solving and coding interview preparation.  
+> Built by a Final-Year CS student targeting product-based company placements.
 
-This repository contains Java solutions for a wide range of DSA and problem-solving questions.  
-It is built as a personal practice space to:
+---
 
-- improve logic building
-- master core DSA patterns
-- prepare for coding rounds and technical interviews
-- track consistency through regular problem solving
+## 📊 Progress Snapshot
 
-## Tech Stack
+| Metric | Count |
+|---|---|
+| ✅ Problems Solved | 200+ |
+| 🏷️ Topics Covered | 12+ |
+| 💻 Language | Java |
+| 🎯 Goal | Product-based company placements |
 
-- **Language:** Java
+---
 
-## What this repository includes
+## 📂 Repository Structure
 
-This repo contains many standalone Java solutions for common DSA and interview problems, including topics such as:
-
-- Arrays
-- 2D Arrays
-- Binary Search
-- Sorting
-- Recursion
-- Backtracking
-- Bit Manipulation
-- Sliding Window / Array Patterns
-- Math-based problems
-- Linked List basics
-- Stack-based problems
-- Greedy problems
-
-## Sample problems in this repo
-
-Some examples of problems already present in the repository:
-
-- Binary Search
-- 2D Binary Search
-- Bubble Sort
-- Insertion Sort
-- Merge Sort
-- Merge Intervals
-- Kadane’s Maximum Subarray
-- Best Time to Buy and Sell Stock
-- Contains Duplicate
-- Find All Duplicates in an Array
-- Missing Number
-- Kth Largest Element
-- Kth Smallest Element
-- Gas Station
-- N-Queens
-- N-Knights
-- Palindrome Partitioning
-- Permutations
-- Reverse Linked List
-- Remove Duplicates
-- Container With Most Water
-
-## Repository style
-
-This repository is organized as individual Java files, with each file focusing on one problem or concept.  
-That makes it useful for:
-
-- quick revision before interviews
-- topic-wise practice
-- understanding one problem at a time
-- comparing similar problem patterns
-
-## Learning goals
-
-The main goals of this repository are:
-
-- build strong DSA fundamentals in Java
-- improve coding speed and accuracy
-- practice interview-standard questions
-- revise important patterns regularly
-- prepare for product-based company interviews
-
-## Why this repo is useful
-
-This repository is especially helpful for:
-
-- beginners learning DSA in Java
-- students preparing for placements
-- interview preparation
-- quick revision of important coding problems
-
-## Future improvements
-
-Planned improvements for this repository:
-
-- add topic-wise folders
-- add problem statements in comments
-- add brute-force and optimal approaches
-- add time and space complexity for each solution
-- add explanation for tricky problems
-- add tags like `array`, `binary-search`, `recursion`, `backtracking`
-- add a progress tracker
-
-## Suggested structure improvement
-
-A cleaner structure for future updates could be:
-
-```bash
+```
 DSA-JAVA/
-│
 ├── Arrays/
 ├── BinarySearch/
 ├── Sorting/
@@ -114,7 +32,79 @@ DSA-JAVA/
 ├── Backtracking/
 ├── LinkedList/
 ├── Stack/
+├── SlidingWindow/
 ├── BitManipulation/
 ├── Math/
 ├── Greedy/
 └── README.md
+```
+
+---
+
+## 🗂️ Topics Covered
+
+| Topic | Sample Problems |
+|---|---|
+| **Arrays** | Find Duplicates, Missing Number, Merge Intervals, Kadane's Algorithm |
+| **Binary Search** | Classic BS, 2D Binary Search, Kth Largest/Smallest Element |
+| **Sorting** | Bubble Sort, Insertion Sort, Merge Sort |
+| **Sliding Window** | Best Time to Buy & Sell Stock, Container With Most Water |
+| **Recursion** | Palindrome Partitioning, Permutations |
+| **Backtracking** | N-Queens, N-Knights |
+| **Linked List** | Reverse Linked List, Remove Duplicates |
+| **Stack** | Stack-based problem patterns |
+| **Greedy** | Gas Station |
+| **Bit Manipulation** | Bitwise problem patterns |
+
+---
+
+## ⚡ Sample Solutions
+
+### Kadane's Algorithm — Maximum Subarray Sum
+```java
+int maxSubarraySum(int[] arr) {
+    int maxFar = arr[0], maxEnd = arr[0];
+    for (int i = 1; i < arr.length; i++) {
+        maxFar = Math.max(arr[i], arr[i] + maxFar);
+        maxEnd = Math.max(maxEnd, maxFar);
+    }
+    return maxEnd;
+}
+```
+
+### Binary Search
+```java
+int binarySearch(int[] arr, int target) {
+    int lo = 0, hi = arr.length - 1;
+    while (lo <= hi) {
+        int mid = lo + (hi - lo) / 2;
+        if (arr[mid] == target) return mid;
+        else if (arr[mid] < target) lo = mid + 1;
+        else hi = mid - 1;
+    }
+    return -1;
+}
+```
+
+---
+
+## 🎯 Goals
+
+- [x] Build strong DSA fundamentals in Java
+- [x] Solve 200+ LeetCode problems
+- [ ] Complete Trees, Graphs, and Dynamic Programming sections
+- [ ] Add time & space complexity to every solution
+- [ ] Add brute-force vs optimal comparisons
+- [ ] Reach 300+ problems before placement season
+
+---
+
+## 🔗 Connect
+
+[![Portfolio](https://img.shields.io/badge/Portfolio-arun--g.vercel.app-purple?style=flat)](https://arun-g.vercel.app)
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-Arun%20G-blue?style=flat&logo=linkedin)](https://linkedin.com/in/arun-g-dev)
+[![LeetCode](https://img.shields.io/badge/LeetCode-Arun--G-orange?style=flat&logo=leetcode)](https://leetcode.com/u/Arun-G)
+
+---
+
+> *"Consistency beats intensity. One problem a day compounds."*
